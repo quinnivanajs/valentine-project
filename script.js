@@ -28,34 +28,27 @@ const catImages = [
 ];
 
 yesBtn.addEventListener("click", function () {
-    message.innerHTML = "Yay! I love you, and Happy Valentine, sayang!";
-
+    message.innerHTML = "Yay! I love you, and Happy Valentine, sayang! 💖";
     yesBtn.style.display = "none";
     noBtn.style.display = "none";
-
     catImage.src = "happy-cat.gif";
 });
 
-noBtn.addEventListener("click", function (){
-        if (clickCount < messages.length) {
-          message.innerHTML = messages[clickCount];
-          catImage.src = catImages[clickCount];
-           clickCount++;
-    
-         if (noSize > 5) {
-            noSize -= 3;
-            noBtn.style.fontSize =  `${noSize}px`;
-        }  
-    
-        if (yesSize < 40) {
-            yesSize += 3;
-            yesBtn.style.fontSize = `${yesSize}px`;
-        }
+noBtn.addEventListener("click", function () {
+    if (clickCount < messages.length) {
+        message.innerHTML = messages[clickCount];
+        catImage.src = catImages[clickCount];  // Pastikan file ada!
+        
+        // Perubahan ukuran tombol & teks
+        if (noSize > 5) noSize -= 3;
+        if (yesSize < 40) yesSize += 3;
+        if (messageSize < 40) messageSize += 3;
 
-        if (messageSize < 40) {
-            messageSize += 3;
-            message.style.fontSize = `${messageSize}px`;
-        }
+        noBtn.style.fontSize = `${noSize}px`;
+        yesBtn.style.fontSize = `${yesSize}px`;
+        message.style.fontSize = `${messageSize}px`;
+
+        clickCount++; // Pindahkan ke akhir agar semua perubahan terjadi dulu
     }
 
     if (clickCount >= messages.length) {
