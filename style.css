@@ -1,0 +1,75 @@
+body{
+    text-align: center;
+    font-family: Poppins, Arial;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: #ff4d6d;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+img {
+    width: 200px;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 20px;
+    margin: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#yesBtn {
+    background-color: lightblue;
+    color: white;
+}
+
+#yesBtn:hover {
+    background-color: #4fa3d1;
+    transform: scale(1.1);
+}
+
+#noBtn {
+    Background-color: rgb(247, 165, 186);
+    color: white;
+}
+
+#noBtn:hover {
+    background-color: rgb(255, 130, 150);
+    transform: scale(1.1);
+}
+
+#message {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4d6d;
+    margin-top: "Poppins", Arial, sans-serif;
+    transition: font-size 0.3s;
+}
